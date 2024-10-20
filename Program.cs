@@ -10,13 +10,20 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-            Dog hachi = new Dog();
-            hachi.Bark();
-
             Dog pochi = new Dog();
-            pochi.Bark();
-            pochi.Run();
 
+            //最初の空腹状態を表示してみる
+            Console.WriteLine("空腹状態 : {0}", pochi.IsHungty());
+
+            //pochiに餌を食べさせる
+            pochi.Eat();
+            Console.WriteLine("空腹状態 : {0}", pochi.IsHungty());
+
+            //pochiに走らせる
+            pochi.Run();
+            Console.WriteLine("空腹状態 : {0}", pochi.IsHungty());
+
+            //一時停止
             Console.ReadLine();
         }
        
