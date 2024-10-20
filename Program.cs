@@ -10,8 +10,15 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C# World!!");
+            Dog hachi = new Dog();
+            hachi.Bark();
+
+            Dog pochi = new Dog();
+            pochi.Bark();
+            pochi.Run();
+
             Console.ReadLine();
         }
+       
     }
 }
