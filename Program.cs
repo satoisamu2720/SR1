@@ -13,7 +13,7 @@ namespace SR1
             Player player = new Player("ロト", 1);
 
             Console.WriteLine("名前 : {0}",player.GetName());
-            Console.WriteLine("レベル : {0}",player.GetName());
+            Console.WriteLine("レベル : {0}",player.GetLevel());
 
             player.Attack();
             player.Defense();
