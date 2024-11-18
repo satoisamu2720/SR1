@@ -10,17 +10,46 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-            Player player = new Player("ロト", 1);
+            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボ");
+            Console.WriteLine("名前:{0}",flyingRobot.GetName());
+            Console.WriteLine("電源:{0}",flyingRobot.GetPowerStatus());
 
-            Console.WriteLine("名前 : {0}",player.GetName());
-            Console.WriteLine("レベル : {0}",player.GetLevel());
+            flyingRobot.DroBomb();
+            flyingRobot.PowerOn();
 
-            player.Attack();
-            player.Defense();
+            flyingRobot.DroBomb();
+            flyingRobot.PowerOff();
 
-            player.LevelUp();
-            Console.WriteLine("レベル : {0}",player.GetLevel());
+            Console.WriteLine("------------");
 
+            TankRobot tankRobot = new TankRobot("タンクロボ");
+
+            Console.WriteLine("名前:{0}", tankRobot.GetName());
+            Console.WriteLine("電源:{0}", tankRobot.GetPowerStatus());
+
+            tankRobot.ShootCannon();
+            tankRobot.PowerOn();
+
+            tankRobot.ShootCannon();
+            tankRobot.PowerOff();
+
+            Console.WriteLine("------------");
+
+
+            TankRobot[] tanks = new TankRobot[5];
+
+            for(int i = 0; i<tanks.Length; i++)
+            {
+                tanks[i] = new TankRobot("タンクNo." + i);
+            }
+            for(int i = 0; i<tanks.Length; i++)
+            {
+                tanks[i].PowerOn();
+            }
+            foreach(TankRobot tank in tanks)
+            {
+                tank.ShootCannon();
+            }
             Console.ReadLine();
         }
     }
