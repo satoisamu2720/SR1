@@ -8,19 +8,11 @@ namespace SR1
 {
     internal class Robot
     {
-        protected string name = "";
-        protected bool powerStatus = false;
-
-        public void PowerOn()
+        protected string name;
+       
+        public Robot(string name)
         {
-            powerStatus = true;
-            Console.WriteLine("{0}は、起動した‼", name);
-
-        }
-
-        public void PowerOff() { 
-            powerStatus = false;
-            Console.WriteLine("{0}は、停止した.." ,name);
+            this.name = name;
         }
 
         public string GetName()
@@ -28,9 +20,10 @@ namespace SR1
             return name;
         }
 
-        public bool GetPowerStatus() 
+        public virtual void Attack()
         {
-            return powerStatus;
+            Console.WriteLine("{0}は、攻撃した！", name);
         }
+
     }
 }

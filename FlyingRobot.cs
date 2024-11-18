@@ -8,21 +8,17 @@ namespace SR1
 {
     internal class FlyingRobot : Robot
     {
-        public  FlyingRobot(string name) 
+        public  FlyingRobot(string name) :base(name) 
         {
             this.name = name;
         }
 
-        public void DroBomb()
+        public override void Attack()
         {
-            if (powerStatus)
-            {
-                Console.WriteLine("{0}は、爆弾を落とした!", name);
-            }
-            else
-            {
-                Console.WriteLine("{0}は、電源offなので爆弾投下はつかえません..", name);
-            }
+           
+            Console.WriteLine("{0}は、爆弾を落とした!", name);
+        
+           
         }
     }
 }
