@@ -10,37 +10,25 @@ namespace SR1
     {
         static void Main(string[] args)
         {
+
             List<int> numbers = new List<int>();
-            numbers.Add(3);
+            Random random = new Random(Environment.TickCount);
 
+
+            for (int i = 0; i < 10; i++)
+            {
+                int r = random.Next(-5,5+1);
+                numbers.Add(r);
+            }
+            
             foreach (int number in numbers)
             {
                 Console.WriteLine(number);
+                
             }
-            Console.WriteLine("---");
 
             Console.ReadLine();
 
-            numbers.Add(7);
-            numbers.Add(2);
-            numbers.Add(1);
-            numbers.Add(5);
-
-            foreach (int number in numbers)
-            {
-                Console.WriteLine(number);
-            }
-            Console.WriteLine("---");
-
-            Console.ReadLine();
-
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                Console.WriteLine(numbers[i]);
-            }
-            Console.WriteLine("---");
-
-            Console.ReadLine();
         }
     }
 }
