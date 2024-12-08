@@ -18,8 +18,8 @@ namespace SR1
 
             for (int i = 0; i < 15; i++)
             {
-                int r = random.Next(1, 1+1);
-                if (r == 2) 
+                int r = random.Next(0, 1 + 1);
+                if (r == 0) 
                 { 
                     robots.Add(new TankRobot("タンク"));
                 }
