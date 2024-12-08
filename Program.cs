@@ -10,17 +10,31 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-            Robot robot = new Robot("ロボット");
-            Console.WriteLine("名前:{0}", robot.GetName());
-            robot.Attack();
 
-            FlyingRobot flyingRobot = new FlyingRobot("空飛ぶロボ");
-            Console.WriteLine("名前:{0}", flyingRobot.GetName());
-            flyingRobot.Attack();
+            Console.WriteLine("---");
 
-            TankRobot tankRobot = new TankRobot("タンクロボ");
-            Console.WriteLine("名前:{0}",tankRobot.GetName());
-            tankRobot.Attack();
+            List<Robot> robots = new List<Robot>();
+            Random random = new Random(Environment.TickCount);
+
+            for (int i = 0; i < 15; i++)
+            {
+                int r = random.Next(1, 1+1);
+                if (r == 2) 
+                { 
+                    robots.Add(new TankRobot("タンク"));
+                }
+
+                if (r == 1)
+                {
+                    robots.Add(new FlyingRobot("爆撃機"));
+                }
+            }
+
+            foreach (Robot robot in robots)
+            {
+                robot.Attack();
+            }
+
 
             Console.ReadLine();
         }
