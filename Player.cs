@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,20 @@ using System.Threading.Tasks;
 
 namespace SR1
 {
-    internal class Player : Item
+    internal class Player
     {
-        public Player(string name)
+        Item item;
+
+        public Player(Item item)
         {
-            this.name = name;
+            this.item = item;
         }
+
+        public void UseItem()
+        {
+            Console.WriteLine("{0}", item);
+            
+        }
+
     }
 }

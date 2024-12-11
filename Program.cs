@@ -10,9 +10,9 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-           Item item = new Item("つるはし");
+            Player player = new Player(new Item("こん棒"));
 
-            item.Use();
+            player.UseItem();
 
             Console.ReadLine();
         }
