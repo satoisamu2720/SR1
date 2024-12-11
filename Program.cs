@@ -10,7 +10,10 @@ namespace SR1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello C# World!!");
+           Item item = new Item("つるはし");
+
+            item.Use();
+
             Console.ReadLine();
         }
     }
