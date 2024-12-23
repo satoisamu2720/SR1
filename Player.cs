@@ -11,14 +11,23 @@ namespace SR1
     {
         Item useItem;
 
-        public Player(Item item)
+        List<Item> items = new List<Item>();
+        public Player()
         {
-            useItem = item;
-        }
 
+        }
+        public void AddItem(Item item)
+        {
+            items.Add(item);
+        }
         public void UseItem()
         {
-            useItem.Use();
+            foreach (Item item in items)
+            {
+
+                useItem = item;
+                useItem.Use();
+            }
         }
 
     }

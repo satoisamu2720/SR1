@@ -22,7 +22,7 @@ namespace SR1
         }
         public void Use()
         {
-            Console.WriteLine("{0}を使用した", name);
+            Console.WriteLine("{0}を使った", name);
         }
     }
 }
