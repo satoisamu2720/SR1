@@ -9,17 +9,16 @@ namespace SR1
 {
     internal class Player
     {
-        Item item;
+        Item useItem;
 
         public Player(Item item)
         {
-            this.item = item;
+            useItem = item;
         }
 
         public void UseItem()
         {
-            Console.WriteLine("{0}", item);
-            
+            useItem.Use();
         }
 
     }
