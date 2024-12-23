@@ -9,12 +9,13 @@ namespace SR1
 {
     internal class Player
     {
-        Item useItem;
 
-        List<Item> items = new List<Item>();
+
+        List<Item> items;
+
         public Player()
         {
-
+            items = new List<Item>();
         }
         public void AddItem(Item item)
         {
@@ -24,9 +25,7 @@ namespace SR1
         {
             foreach (Item item in items)
             {
-
-                useItem = item;
-                useItem.Use();
+                item.Use();
             }
         }
 

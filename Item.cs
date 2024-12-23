@@ -16,10 +16,6 @@ namespace SR1
             this.name = name;
         }
 
-        public string GetName()
-        {
-            return name;
-        }
         public void Use()
         {
             Console.WriteLine("{0}を使った", name);
